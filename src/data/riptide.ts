@@ -1,0 +1,8 @@
+export const riptide = {
+  about: "Riptide is a mobile application for tracking expenses, with the utmost focus on fast user experience. Mocked up in Figma, the next goal is to get it to a functional native app.",
+  solution: [
+  "Fast data entry is the most important feature, so I went for calculator-style input. You input individual expenses, then send them to specific categories to organize them. From there the other features were best to stay out of the way. Unlike other apps where utilizing each main page is essential to their core flow, this is closer to a bundle of two simple tools: inputting data and viewing it. To maximize the user experience of those functions, I went for top bar navigation to keep data entry buttons and main functions closer to where your thumbs would be. ",
+  "The logo and name is designed to highlight the quick flow in inputting data, but the visual identity within the app is centered around being clean and personalizable. The long-term and habitual experience of tracking expenses I feel is nicer to feel like the user’s rather than the brand’s.",
+  "While I feel that I accomplished the goals I set for this project quite well, I do wish I was able to do user testing to see how people interacted with the app and if any design decisions I made don’t make enough sense to the end user. It would be ideal to have users be able to test the app for a longer period of time with real usage, but that isn’t possible with the scope of this project not including coding it into a native mobile app. Nonetheless, a session of users testing the prototype could illuminate any issues or pain points of the user experience, or highlight missing features."
+  ]
+}
