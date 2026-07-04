@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     title: "Seed Packet Design",
-    image: "/portfolio/images/weepingFigFull.png",
+    image: "/portfolio/images/weepingFigFull.jpg",
     thumbnail: "/portfolio/images/weepingFigThumb.jpg",
     description: "Print design, illustration, and branding for a fictional seed packet.",
     colspan: 1
@@ -10,7 +10,7 @@ export const projects = [
   {
     id: 2,
     title: "Infographic",
-    image: "/portfolio/images/infographicFull.svg",
+    image: "/portfolio/images/infographicFull.jpg",
     thumbnail: "/portfolio/images/infographicThumb.jpg",
     description: "Typography, illustration, and overall design for a large print poster.",
     colspan: 2
@@ -18,8 +18,8 @@ export const projects = [
   {
     id: 3,
     title: "Concept Logo Designs",
-    image: "/portfolio/images/logosFull.svg",
-    thumbnail: "/portfolio/images/logosFull.svg",
+    image: "/portfolio/images/logosFull.jpg",
+    thumbnail: "/portfolio/images/logosFull.jpg",
     description: "Various logo designs for concept brands.",
     colspan: 2
   },
@@ -44,7 +44,7 @@ export const projects = [
     title: "Branding and Font",
     image: "/portfolio/images/brandingFull.jpg",
     thumbnail: "/portfolio/images/brandingThumb.jpg",
-    description: "Full branding, font design, illustration, and site design for fictional halloween-themed expo event.",
+    description: "Full branding, font design, and illustration for fictional halloween-themed expo event.",
     colspan: 1
   },
 ]

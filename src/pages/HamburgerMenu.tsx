@@ -24,7 +24,7 @@ HamburgerMenuProps) {
         <div className="absolute w-full h-[96%] -right-1/16 top-0 border-leblack border-l-4 border-b-4 rounded-bl-[65px] z-0 pointer-events-none"></div>
         <button onClick={closeBurger} className="flex flex-row gap-2.5 items-center cursor-pointer z-99">
           <h3 className="text-leblack">Close</h3>
-          <img src={close} className="select-none drag-none" draggable={false}/>
+          <img src={close} className="w-5/8 lg:w-full select-none drag-none" draggable={false}/>
         </button>
         <div className="flex flex-col items-end">
           <a href="#" className="p-2.5 cursor-pointer hover:text-[#071FA3]">

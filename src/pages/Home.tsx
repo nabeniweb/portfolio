@@ -23,19 +23,21 @@ function Home() {
   }
   return (
     <>
+      <div className="absolute top-20 w-[90vw] translate-x-1/20 flex justify-end z-99">
+          <a href="#/" className="cursor-pointer flex items-center justify-center absolute top-1/2 left-0 lg:left-1/2 lg:-translate-x-1/2 -translate-y-1/2">
+            <img src={headerLogo} className="drag-none w-5/8 lg:w-full" draggable={false}/>
+          </a>
+          <button onClick={openBurger} className="flex gap-2.5 items-center p-1 lg:p-5 cursor-pointer">
+            <h3 className="text-lewhite max-lg:hidden">Menu</h3>
+            <img src={hamburger} className="select-none drag-none w-5/8 lg:w-full" draggable={false}/>
+          </button>
+      </div>
       <div className="overflow-visible">
         <section id="hero">
           <div className="relative w-full h-full min-h-dvh overflow-visible z-80">
-            <div className="absolute top-20 left-20 lg:left-[calc(50%-34px)] z-100">
-              <img src={headerLogo} className="select-none drag-none" draggable={false}/>
-            </div>
-            <button onClick={openBurger} className="flex gap-2.5 items-center absolute right-[78px] top-[80px] p-5 cursor-pointer z-100">
-              <h3 className="text-lewhite">Menu</h3>
-              <img src={hamburger} className="select-none drag-none" draggable={false}/>
-            </button>
-            <div className="relative w-full max-w-[1512px] px-[78px] flex flex-row-reverse pt-[200px] mx-auto">
+            <div className="relative w-full max-w-[1512px] px-[5vw] flex flex-row-reverse pt-[200px] mx-auto">
               <div className="flex flex-col items-center justify-center gap-7.5 h-[calc(100dvh-280px)] my-auto w-full lg:max-w-[40vw] z-90">
-                <img className="w-[425px] max-w-[40vw] min-w-[333px] select-none drag-none" src={fullLogo} draggable={false}/>
+                <img className="w-5/8 select-none drag-none" src={fullLogo} draggable={false}/>
                 <div className="flex justify-between items-center px-[33px] py-3.5 outline-lewhite bg-lewhite/10 backdrop-blur-2xl outline-3 rounded-full gap-8">
                   <h2 className="text-lewhite leading-none text-center">Web Designer</h2>
                   <h2 className="text-lewhite leading-none text-center">Illustrator</h2>
@@ -72,8 +74,8 @@ function Home() {
               <img src={recentBackground} className="w-[120%] max-w-[2200px] relative left-1/2 -translate-x-1/2 translate-y-10"/>
               <div className="absolute w-[44vw] h-[44vw] rounded-full bg-lights blur-[500px] z-0 right-1/9 top-1/9"></div>
             </div>
-            <div className="relative w-full max-w-[1512px] px-[78px] flex flex-col items-start gap-[36px] mx-auto mt-[50px] z-99">
-              <h1 className="text-center lg:text-left leading-none mb-5">Recent Works</h1>
+            <div className="relative w-full max-w-[1512px] px-[5vw] flex flex-col items-start gap-[36px] mx-auto mt-[50px] z-99">
+              <h1 className="text-center lg:text-left leading-none mb-5 w-full">Recent Works</h1>
               <div className="flex flex-col gap-22 w-full lg:flex-row">
               {projects.slice(0,3).map((project) => (
                 <div 

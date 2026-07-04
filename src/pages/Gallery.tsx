@@ -66,20 +66,22 @@ function Gallery() {
 
   return (
     <>
-          <a href="#/" className="absolute top-20 left-20 cursor-pointer z-100">
-            <img src={headerLogo} className="drag-none" draggable={false}/>
+      <div className="absolute top-20 w-[90vw] translate-x-1/20 flex justify-between z-99">
+          <a href="#/" className="cursor-pointer flex items-center justify-center">
+            <img src={headerLogo} className="drag-none w-5/8 lg:w-full" draggable={false}/>
           </a>
-          <button onClick={openBurger} className="flex gap-2.5 items-center absolute right-[78px] top-[80px] p-5 cursor-pointer z-99">
-            <h3 className="text-lewhite">Menu</h3>
-            <img src={hamburger} className="select-none drag-none" draggable={false}/>
+        <h3 className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-lewhite lg:text-[36px]!">Gallery</h3>
+          <button onClick={openBurger} className="flex gap-2.5 items-center p-1 lg:p-5 cursor-pointer">
+            <h3 className="text-lewhite max-lg:hidden">Menu</h3>
+            <img src={hamburger} className="select-none drag-none w-5/8 lg:w-full" draggable={false}/>
           </button>
+      </div>
       <section id="Projects">
           <motion.div
           variants={container}
           initial="hidden"
           animate="show"
-          className="relative w-full max-w-[1512px] px-[78px] flex flex-col items-center gap-20 pt-[200px] mx-auto z-80">
-            <h1 className="text-center">Large Projects</h1>
+          className="relative w-full max-w-[1512px] px-[5vw] flex flex-col items-center gap-20 pt-[230px] mx-auto z-80">
             <div className="grid grid-cols-1 auto-rows-[calc(45vh)] gap-5 w-full lg:grid-cols-2">
               {projectsLarge.map((project) => (
               <motion.a
@@ -98,7 +100,7 @@ function Gallery() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
-          className="relative w-full max-w-[1512px] px-[78px] flex flex-col items-center gap-20 pt-[200px] mx-auto z-80">
+          className="relative w-full max-w-[1512px] px-[5vw] flex flex-col items-center gap-20 pt-[200px] mx-auto z-80">
             <h1 className="text-center">Other Works</h1>
             <div className="grid grid-cols-1 auto-rows-[calc(45vh)] gap-5 w-full lg:grid-cols-3">
               {projects.map((project) => (
@@ -111,7 +113,7 @@ function Gallery() {
               key={project.id}
               style={{ backgroundImage: `url(${project.thumbnail})`, gridColumn: `span ${project.colspan}` }}
               onClick={() => setSelectedProject(project)}
-              className="w-full h-full bg-cover bg-center bg-no-repeat rounded-xl cursor-pointer"></motion.button>
+              className="w-full h-full bg-cover bg-center bg-no-repeat rounded-xl cursor-pointer max-lg:col-span-1!"></motion.button>
               ))}
             </div>
           </motion.div>

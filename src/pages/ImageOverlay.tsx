@@ -34,12 +34,12 @@ ImageOverlayProps) {
           }
         }}
         className="fixed inset-0 flex items-center justify-center bg-leblack/40 backdrop-blur-2xl w-full h-full z-98">
-        <div className=" group max-w-[90vw] max-h-[90vh] rounded-xl p-5 bg-lewhite z-98 hover:mb-20 transition-all ease-out">
+        <div className=" group max-w-[90vw] max-h-[90vh] rounded-xl p-5 bg-lewhite z-98 max-md:mb-[22vh] hover:mb-20 transition-all ease-out">
           <img className="max-h-[80vh] max-w-[80vw] object-contain rounded-xl" src={project.image}/>
-          <div className="fixed w-[100vw] left-0 bottom-0 bg-linear-to-t from-leblack via-leblack/60 via-75% to-leblack/0 z-100 opacity-0 group-hover:opacity-100 transition-all">
-              <div className="flex flex-col p-20">
+          <div className="fixed w-[100vw] left-0 bottom-0 bg-linear-to-t from-leblack via-leblack/60 via-75% to-leblack/0 z-100 lg:opacity-0 group-hover:opacity-100 transition-all">
+              <div className="flex flex-col p-10 w-[90%]">
                 <h1 className="leading-none mb-5">{project.title}</h1>
-                <p className="!text-[24px]">{project.description}</p>
+                <p className="lg:!text-[24px]">{project.description}</p>
               </div>
           </div>
         </div>

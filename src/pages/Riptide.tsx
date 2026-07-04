@@ -40,63 +40,66 @@ function Gallery() {
 
   return (
     <>
-      <a href="#/" className="absolute top-20 left-20 cursor-pointer z-100">
-        <img src={headerLogo} className="drag-none" draggable={false}/>
-      </a>
-      <button onClick={openBurger} className="flex gap-2.5 items-center absolute right-[78px] top-[80px] p-5 cursor-pointer z-99">
-        <h3 className="text-lewhite">Menu</h3>
-        <img src={hamburger} className="select-none drag-none" draggable={false}/>
-      </button>
+      <div className="absolute top-20 w-[90vw] translate-x-1/20 flex justify-between z-99">
+          <a href="#/" className="cursor-pointer flex items-center justify-center">
+            <img src={headerLogo} className="drag-none w-5/8 lg:w-full" draggable={false}/>
+          </a>
+        <h3 className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-lewhite text-center line-clamp-1 lg:text-[36px]!">Riptide: Expense Tracker</h3>
+          <button onClick={openBurger} className="flex gap-2.5 items-center p-1 lg:p-5 cursor-pointer">
+            <h3 className="text-lewhite max-lg:hidden">Menu</h3>
+            <img src={hamburger} className="select-none drag-none w-5/8 lg:w-full" draggable={false}/>
+          </button>
+      </div>
       <section id="top">
         <motion.div
           variants={container}
           initial="hidden"
           animate="show"
-          className="relative w-full max-w-[1512px] px-[78px] flex flex-col items-center gap-20 pt-[200px] mx-auto z-80">
-          <h1 className="leading-none mt-3.5 text-center">Riptide: Expense Tracker</h1>
+          className="relative w-full max-w-[1512px] px-[5vw] flex flex-col items-center gap-20 pt-[230px] mx-auto z-80">
           <motion.div
             variants={container}
             initial="hidden"
             animate="show"
-            className="flex flex-col items-center justify-between w-full gap-20 lg:flex-row lg:items-start">
-            <div className="flex flex-col gap-20 items-center max-w-[500px] w-full">
-              <div className="flex flex-col items-center gap-5">
-                <h2 className="mb-2.5 text-center leading-none text-lewhite !text-[38px]">About the Project</h2>
-                <p className="text-left">{riptide.about}</p>
+            className="flex flex-col w-full gap-10">
+            <div className="flex flex-col-reverse lg:flex-row items-start gap-20 w-full">
+              <div className="flex flex-col gap-5 w-full lg:w-[33%]">
+                <h2 className="mb-2.5 text-center lg:text-left leading-none text-lewhite !text-[38px] w-full">About the Project</h2>
+                <p className="text-left">{riptide.about[0]}</p>
+                <p className="text-left">{riptide.about[1]}</p>
               </div>
               <div className="w-full">
                 <img className="w-full rounded-xl" src="images/riptideThumb.jpg"/>
               </div>
-              <div className="w-full">
-                <img className="w-full rounded-xl" src="images/riptideImage2.png"/>
-              </div>
             </div>
-            <div className="flex flex-col gap-20 items-center max-w-[500px] w-full">
+            <div className="h-[5px] w-full bg-radial from-[#4A578A] to-#4A578A00"></div>
+            <div className="flex flex-col lg:flex-row items-start gap-20 w-full">
               <div className="w-full">
-                <img className="w-full rounded-xl" src="images/riptideImage1.png"/>
+                <img className="w-full rounded-xl" src="images/riptideThumb.jpg"/>
               </div>
-              <div className="flex flex-col items-center gap-5">
-                <h2 className="mb-2.5 text-center leading-none text-lewhite !text-[38px]">Design Solution</h2>
+              <div className="flex flex-col gap-5 w-full lg:w-[33%]">
+                <h2 className="mb-2.5 text-center lg:text-left leading-none text-lewhite !text-[38px] w-full">Design Solution</h2>
                 <p className="text-left">{riptide.solution[0]}</p>
                 <p className="text-left">{riptide.solution[1]}</p>
-                <p className="text-left">{riptide.solution[2]}</p>
               </div>
             </div>
+            <div className="h-[5px] w-full bg-radial from-[#4A578A] to-#4A578A00"></div>
           </motion.div>
           <motion.div
             variants={container}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
-            className="grid grid-cols-3 w-full">
-            <div className="flex justify-center w-full">
-              <img className="h-2/3 rounded-xl" src="images/riptideImage1.png"/>
-            </div>
-            <div className="flex justify-center w-full">
-              <img className="h-2/3 rounded-xl" src="images/riptideImage3.png"/>
-            </div>
-            <div className="flex justify-center w-full">
-              <img className="h-2/3 rounded-xl" src="images/riptideImage4.png"/>
+            className="overflow-x-scroll w-full">
+            <div className="grid grid-cols-3 w-[150vw] gap-3">
+              <div className="flex justify-center w-full">
+                <img className="rounded-xl" src="images/riptideImage1.png"/>
+              </div>
+              <div className="flex justify-center w-full">
+                <img className="rounded-xl" src="images/riptideImage3.png"/>
+              </div>
+              <div className="flex justify-center w-full">
+                <img className="rounded-xl" src="images/riptideImage4.png"/>
+              </div>
             </div>
           </motion.div>
         </motion.div>
