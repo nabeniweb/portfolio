@@ -9,6 +9,7 @@ import galleryIconSmall from "../assets/galleryIconSmall.svg"
 import heroBackground from "../assets/heroBackground.png"
 import recentBackground from "../assets/recentBackground.svg"
 import { projects } from "../data/projects.ts"
+import { AnimatePresence } from "framer-motion"
 
 function Home() {
 
@@ -28,7 +29,7 @@ function Home() {
             <img src={headerLogo} className="drag-none w-5/8 lg:w-full" draggable={false}/>
           </a>
           <button onClick={openBurger} className="flex gap-2.5 items-center p-1 lg:p-5 cursor-pointer">
-            <h3 className="text-lewhite max-lg:hidden">Menu</h3>
+            <h3 className="text-lewhite max-md:hidden">Menu</h3>
             <img src={hamburger} className="select-none drag-none w-5/8 lg:w-full" draggable={false}/>
           </button>
       </div>
@@ -104,12 +105,14 @@ function Home() {
             </div>
           </div>
         </section>
+        <AnimatePresence>
         {burgerIsOpen && (
-        <div className="absolute top-[80px] right-[78px] z-99">
+        <div className="fixed w-[80vw] lg:w-[450px] h-screen right-0 top-0 z-100">
             <HamburgerMenu
                 closeBurger={closeBurger}/>
         </div>
         )}
+        </AnimatePresence>
       </div>
     </>
   )

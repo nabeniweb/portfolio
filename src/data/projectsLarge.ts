@@ -5,4 +5,10 @@ export const projectsLarge = [
     thumbnail: "/portfolio/images/riptideThumb.jpg",
     colspan: 1
   },
+  {
+    id: 2,
+    link: "marine-poster-series",
+    thumbnail: "/portfolio/images/marineFlavorshot.webp",
+    colspan: 1
+  },
 ]

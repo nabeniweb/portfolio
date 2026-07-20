@@ -1,4 +1,5 @@
 import close from "../assets/close.svg"
+import hamburgerBackground from "../assets/hamburgerBackground.png"
 import { motion } from "framer-motion"
 
 type HamburgerMenuProps = {
@@ -10,36 +11,68 @@ HamburgerMenuProps) {
   return(
   <>
       <motion.div
-        initial={{ width: "0px", height: "0px", opacity: 0 }}
-        animate={{ width: "auto", height: "auto", opacity: 1 }}
-        exit= {{ width: "0px", height: "0px", opacity: 0, transition: { duration: 0.2 } }}
+        initial={{ x: "100%" }}
+        animate={{ x: 0 }}
+        exit= {{ x: "100%", transition: { duration: 0.2, ease: [0.12, 0, 0.39, 0] } }}
         transition={{ 
-          duration: 0.5,
-          type: "spring",
-          ease: "easeOut"
+          duration: 0.8,
+          ease: [0, 0.93, 0.76, 1]
         }}
 
-        className=" relative bg-lewhite flex flex-col gap-2.5 p-5 pl-[100px] pb-9 rounded-br-[65px] rounded-bl-[65px] rounded-tl-[65px] items-end justify-end overflow-clip">
-        <div className="absolute w-full h-[96%] -right-2/16 -top-[5%] border-leblack border-l-4 border-b-4 rounded-bl-[65px] z-0 pointer-events-none"></div>
-        <div className="absolute w-full h-[96%] -right-1/16 top-0 border-leblack border-l-4 border-b-4 rounded-bl-[65px] z-0 pointer-events-none"></div>
-        <button onClick={closeBurger} className="flex flex-row gap-2.5 items-center cursor-pointer z-99">
-          <h3 className="text-leblack">Close</h3>
-          <img src={close} className="w-5/8 lg:w-full select-none drag-none" draggable={false}/>
-        </button>
-        <div className="flex flex-col items-end">
-          <a href="#" className="p-2.5 cursor-pointer hover:text-[#071FA3]">
-            <h2>Home</h2>
+        className="w-full h-full bg-blue/50 backdrop-blur-2xl flex flex-col items-end">
+        <div className="flex flex-col items-end w-full text-lewhite pr-[5vw] pl-8">
+          <div className="h-50"></div>
+          <a href="#" className="py-2.5 w-full pr-3 cursor-pointer hover:text-[#071FA3] hover:bg-lewhite rounded-2xl transition-all ease-in" draggable={false}>
+            <h2 className="text-right text-[28px]!">Home</h2>
           </a>
-          <a href="#/gallery" className="p-2.5 cursor-pointer hover:text-[#071FA3]">
-            <h2>Gallery</h2>
+          <a href="#/gallery" className="py-2.5 w-full pr-3 cursor-pointer hover:text-[#071FA3] hover:bg-lewhite rounded-2xl transition-all ease-in" draggable={false}>
+            <h2 className="text-right text-[28px]!">Gallery</h2>
           </a>
-          <a href="" className="p-2.5 cursor-pointer hover:text-[#071FA3]">
-            <h2>About</h2>
+          <a href="" className="py-2.5 w-full pr-3 cursor-pointer hover:text-[#071FA3] hover:bg-lewhite rounded-2xl transition-all ease-in" draggable={false}>
+            <h2 className="text-right text-[28px]!">About</h2>
           </a>
-          <a href="" className="p-2.5 cursor-pointer hover:text-[#071FA3]">
-            <h2>Contact</h2>
+          <a href="" className="py-2.5 w-full  pr-3 cursor-pointer hover:text-[#071FA3] hover:bg-lewhite rounded-2xl transition-all ease-in" draggable={false}>
+            <h2 className="text-right text-[28px]!">Contact</h2>
           </a>
         </div>
+        <div className="w-full h-full overflow-hidden">
+          <img src={hamburgerBackground} className="min-w-[1000px] -translate-x-1/6 -translate-y-1/6"/>
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: "0%" }}
+        animate={{ opacity: "100%" }}
+        exit={{ opacity: "0%" }}
+        transition={{
+          duration: 0.2,
+          ease: "linear"
+        }}
+        className="absolute top-20 right-[5vw] mr-3">
+        <button onClick={closeBurger} className="flex p-1 py-3 max-md:-translate-y-1/6 lg:p-5 gap-2.5 items-center cursor-pointer z-99 bg-lewhite rounded-full">
+          <motion.div
+            initial={{ width: 0, opacity: "0%" }}
+            animate={{ width: "auto", opacity: "100%" }}
+            exit={{ width: 0, opacity: "0%", transition: { duration: 0.2, ease: [0, 0.93, 0.76, 1] } }}
+            transition={{
+              duration: 0.8,
+              delay: 0.25,
+              ease: [0, 0.93, 0.76, 1]
+            }}
+            className="max-md:hidden">
+            <h3>Close</h3>
+          </motion.div>
+          <motion.div
+            initial={{ rotate: 90, opacity: "0%" }}
+            animate={{ rotate: 0, opacity: "100%" }}
+            exit={{ rotate: 90, opacity: "0%", transition: { duration: 0.2, ease: [0, 0.93, 0.76, 1] } }}
+            transition={{ 
+              duration: 1,
+              type: "spring"
+            }}
+          className="flex items-center justify-center">
+            <img src={close} className="w-5/8 lg:w-full select-none drag-none" draggable={false}/>
+          </motion.div>
+        </button>
       </motion.div>
   </>
   )

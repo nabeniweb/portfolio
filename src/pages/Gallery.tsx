@@ -142,7 +142,7 @@ function Gallery() {
       </AnimatePresence>
       <AnimatePresence>
         {burgerIsOpen && (
-        <div key="menu "className="absolute top-[80px] right-[78px] z-99">
+        <div key="menu "className="fixed w-[80vw] lg:w-[450px] h-screen right-0 top-0 z-100">
             <HamburgerMenu
                 closeBurger={closeBurger}/>
         </div>

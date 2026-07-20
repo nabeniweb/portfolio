@@ -4,7 +4,7 @@ import headerLogo from "../assets/headerLogo.svg"
 import hamburger from "../assets/hamburger.svg"
 import HamburgerMenu from "./HamburgerMenu.tsx"
 import { AnimatePresence, motion } from "framer-motion"
-import { riptide } from "../data/riptide.ts"
+import { marine } from "../data/marine.ts"
 
 function Gallery() {
   const [burgerIsOpen, setBurgerIsOpen] = useState(false)
@@ -44,7 +44,7 @@ function Gallery() {
           <a href="#/" className="cursor-pointer flex items-center justify-center">
             <img src={headerLogo} className="drag-none w-5/8 lg:w-full" draggable={false}/>
           </a>
-        <h3 className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-lewhite text-center line-clamp-1 lg:text-[36px]!">Riptide: Expense Tracker</h3>
+        <h3 className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-lewhite text-center line-clamp-1 lg:text-[36px]!">Marine Poster Series</h3>
           <button onClick={openBurger} className="flex gap-2.5 items-center p-1 lg:p-5 cursor-pointer">
             <h3 className="text-lewhite max-lg:hidden">Menu</h3>
             <img src={hamburger} className="select-none drag-none w-5/8 lg:w-full" draggable={false}/>
@@ -64,22 +64,21 @@ function Gallery() {
             <div className="flex flex-col-reverse lg:flex-row items-start gap-20 w-full">
               <div className="flex flex-col gap-5 w-full lg:w-[33%]">
                 <h2 className="mb-2.5 text-center lg:text-left leading-none text-lewhite !text-[38px] w-full">About the Project</h2>
-                <p className="text-left">{riptide.about[0]}</p>
-                <p className="text-left">{riptide.about[1]}</p>
+                <p className="text-left">{marine.about[0]}</p>
               </div>
               <div className="w-full">
-                <img className="w-full rounded-xl" src="images/riptideThumb.jpg"/>
+                <img className="w-full rounded-xl" src="images/marineFull.jpg"/>
               </div>
             </div>
             <div className="h-[5px] w-full bg-radial from-[#4A578A] to-#4A578A00"></div>
             <div className="flex flex-col lg:flex-row items-start gap-20 w-full">
               <div className="w-full">
-                <img className="w-full rounded-xl" src="images/riptideThumb.jpg"/>
+                <img className="w-full rounded-xl" src="images/marineCloseUps.webp"/>
               </div>
               <div className="flex flex-col gap-5 w-full lg:w-[33%]">
                 <h2 className="mb-2.5 text-center lg:text-left leading-none text-lewhite !text-[38px] w-full">Design Solution</h2>
-                <p className="text-left">{riptide.solution[0]}</p>
-                <p className="text-left">{riptide.solution[1]}</p>
+                <p className="text-left">{marine.solution[0]}</p>
+                <p className="text-left">{marine.solution[1]}</p>
               </div>
             </div>
             <div className="h-[5px] w-full bg-radial from-[#4A578A] to-#4A578A00"></div>
@@ -89,16 +88,16 @@ function Gallery() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
-            className="overflow-x-scroll w-full">
-            <div className="flex flex-row w-max h-[85vh] gap-3">
-              <div className="">
-                <img className="rounded-xl lg:h-[85vh] h-full" src="images/riptideImage1.png"/>
+            className="overflow-x-scroll w-full snap-x snap-mandatory">
+            <div className="flex flex-row w-max h-[85vh] gap-3 snap-x">
+              <div className="snap-center max-md:snap-always">
+                <img className="rounded-xl lg:h-[85vh] max-md:w-[90vw]" src="images/marineShark.webp"/>
               </div>
-              <div className="">
-                <img className="rounded-xl lg:h-[85vh] h-full" src="images/riptideImage3.png"/>
+              <div className="snap-center max-md:snap-always">
+                <img className="rounded-xl lg:h-[85vh] max-md:w-[90vw]" src="images/marineRay.webp"/>
               </div>
-              <div className="">
-                <img className="rounded-xl lg:h-[85vh] h-full" src="images/riptideImage4.png"/>
+              <div className="snap-center max-md:snap-always">
+                <img className="rounded-xl lg:h-[85vh] max-md:w-[90vw]" src="images/marineOctopus.webp"/>
               </div>
             </div>
           </motion.div>
